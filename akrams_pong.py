@@ -53,22 +53,26 @@ pen.write("Player A: 0  Player B: 0", align="center", font=("Courier", 24, "norm
 def paddle_a_up():
     y = paddle_a.ycor()
     y += 20
-    paddle_a.sety(y)
+    if paddle_a.ycor() < 242:
+        paddle_a.sety(y)
 
 def paddle_a_down():
     y = paddle_a.ycor()
     y -= 20
-    paddle_a.sety(y)
+    if paddle_a.ycor() > -238:
+        paddle_a.sety(y)
 
 def paddle_b_up():
     y = paddle_b.ycor()
     y += 20
-    paddle_b.sety(y)
+    if paddle_b.ycor() < 242:
+        paddle_b.sety(y)
 
 def paddle_b_down():
     y = paddle_b.ycor()
     y -= 20
-    paddle_b.sety(y)
+    if paddle_b.ycor() > -238:
+        paddle_b.sety(y)
 
 
 # Key bindings
